@@ -2,6 +2,8 @@
 
   // in attesa di fare il db del progetto laravel Auth per creare il model e quindi avere la mia apiurl, ho gettato le basi di quel che abbiamo ripassato in classe, ovviamente la api è errata.
 
+  // ho dovuto cambiare il nome repo non avendo letto bene la consegna era sbagliata
+
   import axios from 'axios';
   import {store} from './data/store';
 
