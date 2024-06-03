@@ -1,9 +1,5 @@
 <script>
 
-  // in attesa di fare il db del progetto laravel Auth per creare il model e quindi avere la mia apiurl, ho gettato le basi di quel che abbiamo ripassato in classe, ovviamente la api è errata.
-
-  // ho dovuto cambiare il nome repo non avendo letto bene la consegna era sbagliata
-
   import axios from 'axios';
   import {store} from './data/store';
 
@@ -11,7 +7,7 @@
 
     data(){
       return{
-        posts: []
+        projects: []
       }
     },
 
@@ -19,7 +15,7 @@
       getApi(){
         axios.get(store.apiUrl)
           .then(result =>{
-            this.posts = result.data
+            this.projects = result.data
           })
         .catch(error =>{
           console.log(error.message);
@@ -38,11 +34,18 @@
 
 <template>
   <div>
-
+    <h1>LISTA PROGETTI</h1>
+    <ul>
+      <li v-for="project in projects" :key="project.id">
+        {{ project.id }} -:- {{ project.title }}
+      </li>
+    </ul>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
+
+@import './assets/scss/main.scss';
 
 </style>
