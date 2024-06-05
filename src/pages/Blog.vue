@@ -1,16 +1,16 @@
 <script>
-  import {store} from '../../data/store';
+  import {store} from '../data/store';
   import axios from 'axios';
 
   export default {
     name: 'Blog',
-    posts: [],
+    projects: [],
 
     methods:{
       getApi(){
         axios.get(store.apiUrl)
         .then(results=>{
-          posts = results.data.data
+          projects = results.data.data
         })
         .catch(error=>{
           console.log(error.message)
@@ -24,11 +24,11 @@
 </script>
 
 <template>
-  <h1>I miei post</h1>
+  <h1>I miei progetti</h1>
   <div>
     <ul>
-      <li v-for="post in posts" :key="post.id">
-        {{ post.id }} - {{ post.title }}
+      <li v-for="project in projects" :key="project.id">
+        {{ project.id }} -:- {{ project.title }}
       </li>
     </ul>
   </div>

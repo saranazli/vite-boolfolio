@@ -1,3 +1,4 @@
+
 <script>
   export default {
     name: 'Header'
@@ -5,25 +6,25 @@
 </script>
 
 <template>
-  <div>
-    <ul>
+  <nav class="container">
+    <ul class="d-flex">
       <li>
-        <router-link :to=*{name: 'home'}*>Home</router-link>
+        <router-link :to="{name: 'home'}">Home</router-link>
       </li>
       <li>
-        <router-link :to=*{name: 'about'}*>About</router-link>
+        <router-link :to="{name: 'about'}">About</router-link>
       </li>
       <li>
-        <router-link :to=*{name: 'contacts'}*>Contacts</router-link>
+        <router-link :to="{name: 'contacts'}">Contacts</router-link>
       </li>
       <li>
-        <router-link :to=*{name: 'blog'}*>Blog</router-link>
+        <router-link :to="{name: 'blog'}">Blog</router-link>
       </li>
       <li>
-        <router-link :to=*{name: 'home'}*></router-link>
+        <router-link :to="{name: 'home'}"></router-link>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 
