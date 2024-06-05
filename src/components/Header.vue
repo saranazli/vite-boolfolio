@@ -7,7 +7,7 @@
 
 <template>
   <nav class="container">
-    <ul class="d-flex">
+    <ul class="d-flex justify-content-around">
       <li>
         <router-link :to="{name: 'home'}">Home</router-link>
       </li>
