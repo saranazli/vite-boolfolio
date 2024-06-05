@@ -3,7 +3,7 @@
   import axios from 'axios';
 
   export default {
-    name: 'blog',
+    name: 'Blog',
     posts: [],
 
     methods:{
@@ -24,6 +24,7 @@
 </script>
 
 <template>
+  <h1>I miei post</h1>
   <div>
     <ul>
       <li v-for="post in posts" :key="post.id">

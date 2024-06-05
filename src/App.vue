@@ -1,31 +1,9 @@
 <script>
 
-  import axios from 'axios';
-  import {store} from './data/store';
+  import Header from './components/Header.vue';
 
   export default {
-
-    data(){
-      return{
-        projects: []
-      }
-    },
-
-    methods:{
-      getApi(){
-        axios.get(store.apiUrl)
-          .then(result =>{
-            this.projects = result.data
-          })
-        .catch(error =>{
-          console.log(error.message);
-        })
-      }
-    },
-    
-    mounted(){
-      this.getApi();
-    }
+    components: Header
   }
 
 
@@ -33,14 +11,11 @@
 
 
 <template>
-  <div>
-    <h1>LISTA PROGETTI</h1>
-    <ul>
-      <li v-for="project in projects" :key="project.id">
-        {{ project.id }} -:- {{ project.title }}
-      </li>
-    </ul>
-  </div>
+
+  <header/>
+
+<router-view></router-view>
+  
 </template>
 
 

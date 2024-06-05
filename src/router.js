@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import home from './assets/pages/home.vue';
-import about from './assets/pages/about.vue';
-import contacts from './assets/pages/contacts.vue';
-import blog from './assets/pages/blog.vue';
-import error404 from './assets/pages/error404.vue';
+import Home from './pages/Home.vue';
+import About from './pages/About.vue';
+import Contacts from './pages/Contacts.vue';
+import Blog from './pages/Blog.vue';
+import Error404 from './pages/Error404.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -11,29 +11,29 @@ const router = createRouter({
     {
       path: '/',
       name:'home',
-      components: home
+      components: Home
     },
     {
       path: '/',
       name:'about',
-      components: about
+      components: About
     },
     {
       path: '/',
       name:'contacts',
-      components: contacts
+      components: Contacts
     },
     {
       path: '/',
       name:'blog',
-      components: blog
+      components: Blog
     },
     {
       path: '/:pathMatch(.*)*',
       name:'error404',
-      components: error404
+      components: Error404
     }
   ]
 })
 
-export {router};
+export { router };
